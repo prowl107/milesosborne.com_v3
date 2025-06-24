@@ -1,4 +1,6 @@
-// import strata_css from "../stylesheets/strata.module.css";
+import { getProfile } from "@/sanity-utils";
+const profile = await getProfile();
+const profilePic = profile.picture;
 
 export default function banner() {
   return (
@@ -7,14 +9,15 @@ export default function banner() {
       <header id="header">
         <div className="inner">
           <a href="#" className="image avatar">
-            <img src="images/avatar.jpg" alt="d.ts" />
+            <img src={profilePic} alt="d.ts" />
           </a>
           <h1>
-            <strong>I am Strata</strong>, a super simple
-            <br />
-            responsive site template freebie
-            <br />
-            crafted by <a href="http://html5up.net">HTML5 UP</a>.
+            <strong>Hi, I'm Miles</strong>
+            <p>
+              Embedded Software Engineer
+              <br />  and sometimes a rocket scientist on the weekend
+              <br />
+            </p>
           </h1>
         </div>
       </header>

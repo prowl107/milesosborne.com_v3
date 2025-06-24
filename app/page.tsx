@@ -1,11 +1,18 @@
+import { getProfile, getProjects, getLastUpdatedDate } from "@/sanity-utils"
 import banner from "./page_components/banner";
 import about from "./page_components/about";
 import featured_projects from "./page_components/featured_projects";
 import contact from "./page_components/contact";
 import footer from "./page_components/footer";
 
-function setup_page ()
-{
+export default async function Home() {
+
+  const projects = await getProjects();
+  // const profile = await getProfile();
+  const ISO_lastUpdatedAt = await getLastUpdatedDate();
+  const lastUpdatedAt_date = new Date(ISO_lastUpdatedAt._updatedAt);
+  const lastUpdatedDateString = lastUpdatedAt_date.toISOString().substring(0,10)
+  
   return (
     <div>
       {/**************************************************
@@ -18,11 +25,11 @@ function setup_page ()
       <div id="main">
         {about()};
         {featured_projects()};
-        {contact()};
+        {/* {contact()}; */}
       </div>
 
       {/* Footer section */}
-      {footer()};
+      {/* {footer()}; */}
 
       {/* Scripts */}
 			<script src="assets/js/jquery.min.js"></script>
@@ -32,12 +39,6 @@ function setup_page ()
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
     </div>
-  )
-}
-
-export default function Home() {
-  return (
-    setup_page()
   );
 }
 
