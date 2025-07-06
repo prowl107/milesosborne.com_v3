@@ -29,19 +29,19 @@ export default async function Home() {
         {about()}
         {timeline()}
         {featured_projects()}
-        {/* {contactForm()}; */}
+        {contactForm()}
       </div>
 
       {/* Footer section */}
       {footer()}
 
       {/* Scripts */}
-      <script src="assets/js/jquery.min.js"></script>
-      <script src="assets/js/jquery.poptrox.min.js"></script>
-      <script src="assets/js/browser.min.js"></script>
-      <script src="assets/js/breakpoints.min.js"></script>
-      <script src="assets/js/util.js"></script>
-      <script src="assets/js/main.js"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery.poptrox.min.js"></script>
+      <script src="js/browser.min.js"></script>
+      <script src="js/breakpoints.min.js"></script>
+      <script src="js/util.js"></script>
+      <script src="js/main.js"></script>
     </div>
   );
 }

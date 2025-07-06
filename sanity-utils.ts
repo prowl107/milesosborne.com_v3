@@ -2,7 +2,7 @@ import { createClient, groq } from "next-sanity";
 import { Project } from "@/types/Project"
 import { Profile } from "@/types/Profile";
 import { Documentation } from "@/types/Documentation";
-import { revalidatePath } from 'next/cache'
+// import { revalidatePath } from 'next/cache'
 export const dynamic = 'force-dynamic'
 
 /* Sanity CMS config settings */

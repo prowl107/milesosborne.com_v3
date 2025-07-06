@@ -1,67 +1,22 @@
-'use client'
-
-import React, { useState } from "react";
-import { useFormspark } from "@formspark/use-formspark";
-const FORMSPARK_FORM_ID = "GvHjf2rm";
+import React from "react";
+import SubmitContactFormButton from "./submitContactFormButton";
 
 export default function contactForm() {
-
-    const [submit, submitting] = useFormspark({
-      formId: FORMSPARK_FORM_ID,
-    });
-  
-    const [message, setMessage] = useState("");
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-  
-    const onSubmit = async (e) => {
-      e.preventDefault();
-      await submit({ name, email, message });
-      alert("Form submitted");
-      window.location.href = "https://" + window.location.hostname;
-    };
-
   return (
     // Three
-    <section id="three">
-      <h2>Get In Touch</h2>
-      <p>
-        Accumsan pellentesque commodo blandit enim arcu non at amet id arcu
-        magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem
-        vulputate lorem neque lorem ipsum dolor.
-      </p>
-      <div className="row">
-        <div className="col-8 col-12-small">
-          <form method="post" action="#">
-            <div className="row gtr-uniform gtr-50">
-              <div className="col-6 col-12-xsmall">
-                <input type="text" name="name" id="name" placeholder="Name" />
-              </div>
-              <div className="col-6 col-12-xsmall">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                />
-              </div>
-              <div className="col-12">
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Message"
-                  rows="4"
-                ></textarea>
-              </div>
-            </div>
-          </form>
-          <ul className="actions">
-            <li>
-              <input type="submit" value="Send Message" />
-            </li>
-          </ul>
+    <SubmitContactFormButton>
+      <section id="three">
+        <h2>Get In Touch</h2>
+        <p>
+          Accumsan pellentesque commodo blandit enim arcu non at amet id arcu
+          magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem
+          vulputate lorem neque lorem ipsum dolor.
+        </p>
+        <div className="row">
+          <div className="col-8 col-12-small">
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </SubmitContactFormButton>
   );
 }
