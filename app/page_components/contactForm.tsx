@@ -1,4 +1,26 @@
-export default function contact() {
+'use client'
+
+import React, { useState } from "react";
+import { useFormspark } from "@formspark/use-formspark";
+const FORMSPARK_FORM_ID = "GvHjf2rm";
+
+export default function contactForm() {
+
+    const [submit, submitting] = useFormspark({
+      formId: FORMSPARK_FORM_ID,
+    });
+  
+    const [message, setMessage] = useState("");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+  
+    const onSubmit = async (e) => {
+      e.preventDefault();
+      await submit({ name, email, message });
+      alert("Form submitted");
+      window.location.href = "https://" + window.location.hostname;
+    };
+
   return (
     // Three
     <section id="three">

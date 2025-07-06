@@ -13,7 +13,7 @@ export default function featured_projects() {
 							{featured_projects_list.map((item) => (
 							<article className="col-6 col-12-xsmall work-item">
 								  <SpotlightCard key={item._id} featureProject={item} />
-								{addLinkAttribute()}
+								{/* {addLinkAttribute()} */}
 							</article>
 							))}
 							{/* <article className="col-6 col-12-xsmall work-item">

@@ -3269,3 +3269,71 @@ input, select, textarea {
   display: block;
   border-radius: 8px; /* optional for cleaner visuals */
 }
+
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  border-left: 3px solid #49bf9d;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -0.65rem;
+  top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  background: #49bf9d;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #49bf9d;
+}
+
+.timeline-content {
+  background: rgb(36, 36, 36);
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.timeline-content h3 span {
+  color: #49bf9d;
+}
+
+.job-dates {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.timeline-collapsed {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.timeline-collapsed.expanded {
+  max-height: 1000px; /* Large enough to fit all items */
+}
+
+/* button.button.small {
+  background-color: transparent;
+  border: 2px solid #49bf9d;
+  color: #49bf9d;
+  padding: 0.35em 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button.button.small:hover,
+button.button.small:focus {
+  color: white;
+  outline: none;
+} */
