@@ -17,9 +17,9 @@ export const _apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-0
 export async function getProjects(): Promise<Project[]> {
     const client = createClient(
         {
-            projectId: _projectId,
-            dataset: _dataset,
-            apiVersion: _apiVersion,
+            projectId: 'n7m4qrmh',
+            dataset: 'production',
+            apiVersion: "2024-03-10",
             useCdn: false,
             perspective: 'published'
         }
