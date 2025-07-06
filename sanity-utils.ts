@@ -39,11 +39,11 @@ export async function getProjects(): Promise<Project[]> {
             featured,
         }`,
         // {cache: 'no-store'},
-        { next: { revalidate: 5 } }
+        // { next: { revalidate: 5 } }
     )
 }
 
-export async function getProfile(): Promise<Profile[]> {
+export async function getProfile(): Promise<Profile> {
     const client = createClient(
         {
             projectId: 'n7m4qrmh',
@@ -63,7 +63,7 @@ export async function getProfile(): Promise<Profile[]> {
             bio
           }`,
         //   {cache: 'no-store'},
-          { next: { revalidate: 5 } }
+        //   { next: { revalidate: 5 } }
     )
 }
 
@@ -88,7 +88,7 @@ export async function getLastUpdatedDate() {
           }
           `,
         //   {cache: 'no-store'},
-          { next: { revalidate: 5 } }
+        //   { next: { revalidate: 5 } }
     )
 }
 
@@ -116,7 +116,7 @@ export async function getProjectDocumentation(slug: string): Promise<Documentati
         }`,
         { slug },
         // {cache: 'no-store'},
-        { next: { revalidate: 5 } }
+        // { next: { revalidate: 5 } }
     )
 
     // const doc = client.fetch(

@@ -11,6 +11,7 @@ export default function about() {
         <h2>About Me</h2>
       </header>
       <PortableText value={profile.bio} />
+      
       {/* {addLinkAttribute()} */}
       {/* <ul className="actions">
         <li>

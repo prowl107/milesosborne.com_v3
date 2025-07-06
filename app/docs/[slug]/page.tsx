@@ -80,7 +80,7 @@ async function getDocumentBanner({ projectDoc }) {
   {
     if (projectDoc.banner != null) {
       return (
-        <span class="image main">
+        <span className="image main">
           <img src={urlFor(projectDoc.banner).url()}/>
         </span>
       );

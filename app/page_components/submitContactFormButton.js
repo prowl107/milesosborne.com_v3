@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useFormspark } from "@formspark/use-formspark";
 const FORMSPARK_FORM_ID = "GvHjf2rm";
 
-export default function SubmitContactFormButton({}) {
+export default function SubmitContactFormButton() {
   
   // const [visible, setVisible] = useState(false);
 

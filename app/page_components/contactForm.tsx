@@ -4,7 +4,7 @@ import SubmitContactFormButton from "./submitContactFormButton";
 export default function contactForm() {
   return (
     // Three
-    <SubmitContactFormButton>
+    <>
       <section id="three">
         <h2>Get In Touch</h2>
         <p>
@@ -13,10 +13,10 @@ export default function contactForm() {
           vulputate lorem neque lorem ipsum dolor.
         </p>
         <div className="row">
-          <div className="col-8 col-12-small">
-          </div>
+          <div className="col-8 col-12-small"></div>
         </div>
       </section>
-    </SubmitContactFormButton>
+      <SubmitContactFormButton></SubmitContactFormButton>
+    </>
   );
 }
