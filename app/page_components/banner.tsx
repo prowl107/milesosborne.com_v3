@@ -12,7 +12,7 @@ export default function banner() {
             <img src={profilePic} alt="d.ts" />
           </a>
           <h1>
-            <strong>Hi, I'm Miles</strong>
+            <strong>Hi, I&apos;m Miles</strong>
             <p>
               Embedded Software Engineer
               <br />  and sometimes a rocket scientist on the weekend

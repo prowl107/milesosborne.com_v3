@@ -82,21 +82,21 @@ export default function about() {
   );
 }
 
-function addLinkAttribute() {
-  if (typeof window !== "undefined") {
-    $(document).ready(function () {
-      const textBlock = document.getElementsByClassName("bio");
-      for (let i = 0; i < textBlock.length; i++) {
-        let text = textBlock[i].getElementsByTagName("a");
-        for (let j = 0; j < text.length; j++) {
-          if (!text[j].hasAttribute("target")) {
-            text[j].setAttribute("target", "_blank");
-          }
-          if (!text[j].hasAttribute("rel")) {
-            text[j].setAttribute("rel", "noreferrer");
-          }
-        }
-      }
-    });
-  }
-}
+// function addLinkAttribute() {
+//   if (typeof window !== "undefined") {
+//     $(document).ready(function () {
+//       const textBlock = document.getElementsByClassName("bio");
+//       for (let i = 0; i < textBlock.length; i++) {
+//         const text = textBlock[i].getElementsByTagName("a");
+//         for (let j = 0; j < text.length; j++) {
+//           if (!text[j].hasAttribute("target")) {
+//             text[j].setAttribute("target", "_blank");
+//           }
+//           if (!text[j].hasAttribute("rel")) {
+//             text[j].setAttribute("rel", "noreferrer");
+//           }
+//         }
+//       }
+//     });
+//   }
+// }

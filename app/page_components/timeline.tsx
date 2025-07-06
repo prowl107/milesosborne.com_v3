@@ -1,4 +1,3 @@
-import { getProjects } from "@/sanity-utils";
 import ToggleHistory from "./toggleHIstory"; // adjust if your structure differs
 
 export default function timeline() {

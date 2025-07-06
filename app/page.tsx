@@ -1,4 +1,3 @@
-import { getProfile, getProjects, getLastUpdatedDate } from "@/sanity-utils";
 import banner from "./page_components/banner";
 import about from "./page_components/about";
 import featured_projects from "./page_components/featured_projects";
