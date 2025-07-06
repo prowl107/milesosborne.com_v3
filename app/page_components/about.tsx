@@ -11,7 +11,7 @@ export default function about() {
         <h2>About Me</h2>
       </header>
       <PortableText value={profile.bio} />
-      {addLinkAttribute()}
+      {/* {addLinkAttribute()} */}
       {/* <ul className="actions">
         <li>
           <a href="#" className="button">
@@ -87,7 +87,7 @@ function addLinkAttribute() {
     $(document).ready(function () {
       const textBlock = document.getElementsByClassName("bio");
       for (let i = 0; i < textBlock.length; i++) {
-        var text = textBlock[i].getElementsByTagName("a");
+        let text = textBlock[i].getElementsByTagName("a");
         for (let j = 0; j < text.length; j++) {
           if (!text[j].hasAttribute("target")) {
             text[j].setAttribute("target", "_blank");

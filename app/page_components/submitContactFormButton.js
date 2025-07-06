@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { useFormspark } from "@formspark/use-formspark";
 const FORMSPARK_FORM_ID = "GvHjf2rm";
 
-export default function SubmitContactFormButton({ children }) {
+export default function SubmitContactFormButton({}) {
   
-  const [visible, setVisible] = useState(false);
+  // const [visible, setVisible] = useState(false);
 
     const [submit, submitting] = useFormspark({
       formId: FORMSPARK_FORM_ID,

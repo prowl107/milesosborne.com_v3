@@ -1,16 +1,12 @@
 import { getProjectDocumentation } from "@/sanity-utils";
 // import Menu from "@/components/Menu";
 import { PortableText } from "@portabletext/react";
-import { Documentation } from "@/types/Documentation";
+// import { Documentation } from "@/types/Documentation";
 import imageUrlBuilder from '@sanity/image-url'
-import urlBuilder from '@sanity/image-url'
+// import urlBuilder from '@sanity/image-url'
 import { getImageDimensions } from '@sanity/asset-utils'
 import { createClient } from "next-sanity";
 import banner from "@/app/page_components/banner"
-
-type Props = {
-  params: { slug: string }
-}
 
 // Barebones lazy-loaded image component
 const SampleImageComponent = ({value}) => {
@@ -47,7 +43,8 @@ function urlFor(source) {
 }
 
 export default async function Page({params}) {
-  const slug = params.slug;
+  // const slug = await params.slug;
+  const { slug } = await params
   // console.log("Doc-slug: " + slug);
   const projectDoc = (await getProjectDocumentation(slug))[0]["docs"];
   // console.log(projectDoc);
@@ -91,13 +88,13 @@ async function getDocumentBanner({ projectDoc }) {
   }
 }
 
-async function getImageComponents({ projectDoc })
-{
-  if (projectDoc.banner != null) {
-    return (
-      <span class="image main">
-        <img src={urlFor(projectDoc.banner).url()}/>
-      </span>
-    );
-  }
-}
+// async function getImageComponents({ projectDoc })
+// {
+//   if (projectDoc.banner != null) {
+//     return (
+//       <span class="image main">
+//         <img src={urlFor(projectDoc.banner).url()}/>
+//       </span>
+//     );
+//   }
+// }

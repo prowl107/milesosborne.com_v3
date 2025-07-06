@@ -5,16 +5,8 @@ import featured_projects from "./page_components/featured_projects";
 import contactForm from "./page_components/contactForm";
 import footer from "./page_components/footer";
 import timeline from "./page_components/timeline";
-import { time } from "console";
 
 export default async function Home() {
-  const projects = await getProjects();
-  // const profile = await getProfile();
-  const ISO_lastUpdatedAt = await getLastUpdatedDate();
-  const lastUpdatedAt_date = new Date(ISO_lastUpdatedAt._updatedAt);
-  const lastUpdatedDateString = lastUpdatedAt_date
-    .toISOString()
-    .substring(0, 10);
 
   return (
     <div>

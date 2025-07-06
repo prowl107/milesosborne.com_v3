@@ -1,7 +1,7 @@
 import { getProjects } from "@/sanity-utils"
 import ProjectCard from "../page_components/ProjectCard";
 import banner from "../page_components/banner";
-const projects = await getProjects();
+// const projects = await getProjects();
 
 // export default function featured_projects() {
 //     return(
@@ -78,21 +78,21 @@ const projects = await getProjects();
   </div>
 }
 
-function addLinkAttribute() {
-  if (typeof window !== "undefined") {
-    document.addEventListener("DOMContentLoaded", function(){
-      const textBlock = document.getElementsByClassName("project-description");
-      for (let i = 0; i < textBlock.length; i++) {
-        var text = textBlock[i].getElementsByTagName("a");
-        for (let j = 0; j < text.length; j++) {
-          if (!text[j].hasAttribute("target")) {
-            text[j].setAttribute("target", "_blank");
-          }
-          if (!text[j].hasAttribute("rel")) {
-            text[j].setAttribute("rel", "noreferrer");
-          }
-        }
-      }
-    });
-  }
-}
+// function addLinkAttribute() {
+//   if (typeof window !== "undefined") {
+//     document.addEventListener("DOMContentLoaded", function(){
+//       const textBlock = document.getElementsByClassName("project-description");
+//       for (let i = 0; i < textBlock.length; i++) {
+//         let text = textBlock[i].getElementsByTagName("a");
+//         for (let j = 0; j < text.length; j++) {
+//           if (!text[j].hasAttribute("target")) {
+//             text[j].setAttribute("target", "_blank");
+//           }
+//           if (!text[j].hasAttribute("rel")) {
+//             text[j].setAttribute("rel", "noreferrer");
+//           }
+//         }
+//       }
+//     });
+//   }
+// }
