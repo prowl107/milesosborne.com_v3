@@ -126,7 +126,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #1f1e1e;
+		background: #1c1b1b;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -154,13 +154,13 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #49bf9d;
+		color: rgb(78, 150, 243);
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
+			color: rgb(78, 150, 243) !important;
 			text-decoration: none;
 		}
 
@@ -1884,7 +1884,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #49bf9d;
+			border-color: rgb(78, 150, 243);
 		}
 
 	select {
@@ -1989,7 +1989,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #49bf9d;
+			border-color: rgba(78,150,243,.5);
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2185,7 +2185,6 @@ input, select, textarea {
 			}
 
 			.image.avatar img {
-				border-radius: 100%;
 				width: 100%;
 			}
 
@@ -2507,8 +2506,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: rgb(78, 150, 243);
+			color: rgb(78, 150, 243) !important;
 		}
 
 		input[type="submit"]:active,
@@ -2516,8 +2515,8 @@ input, select, textarea {
 		input[type="button"]:active,
 		.button:active {
 			background-color: rgba(73, 191, 157, 0.1);
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: rgba(78,150,243,.5);
+			color: rgba(78,150,243,.5) !important;
 		}
 
 		input[type="submit"].icon,
@@ -2560,8 +2559,8 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #49bf9d;
-			border-color: #49bf9d;
+			background-color: rgba(78,150,243,.5);
+			border-color: rgba(78,150,243,.5);
 			color: #ffffff !important;
 		}
 
@@ -2636,7 +2635,7 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("/images/overlay.png"), url("/images/bg.jpg");
+		background-color: #1c1b1b;
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
@@ -2683,7 +2682,7 @@ input, select, textarea {
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 8em;
 		}
 
 /* Footer */
@@ -3274,7 +3273,7 @@ input, select, textarea {
   position: relative;
   margin: 2rem 0;
   padding-left: 2rem;
-  border-left: 3px solid #49bf9d;
+  border-left: 3px solid rgba(78,150,243,.5);
 }
 
 .timeline-item {
@@ -3288,10 +3287,10 @@ input, select, textarea {
   top: 0.25rem;
   width: 1rem;
   height: 1rem;
-  background: #49bf9d;
+  background: rgba(78,150,243,.5);
   border-radius: 50%;
   border: 3px solid white;
-  box-shadow: 0 0 0 2px #49bf9d;
+  box-shadow: 0 0 0 2px rgba(78,150,243,.5);
 }
 
 .timeline-content {
@@ -3303,7 +3302,7 @@ input, select, textarea {
 }
 
 .timeline-content h3 span {
-  color: #49bf9d;
+  color: rgb(78, 150, 243);
 }
 
 .job-dates {
@@ -3324,8 +3323,8 @@ input, select, textarea {
 
 /* button.button.small {
   background-color: transparent;
-  border: 2px solid #49bf9d;
-  color: #49bf9d;
+  border: 2px solid rgba(78,150,243,.5);
+  color: rgba(78,150,243,.5);
   padding: 0.35em 1em;
   border-radius: 6px;
   cursor: pointer;
@@ -3341,3 +3340,41 @@ button.button.small:focus {
 .project-button{
 	padding-top: 2em;
 }
+
+header h2::before,
+header h2::before,
+header h3::before,
+header h4::before,
+header h5::before,
+header h6::before {
+	margin-left: auto;
+  margin-right: auto;
+content: "";
+  display: block;
+  width: 2em;
+  height: 1px;
+  border-top: 1px solid;
+  margin: 0 0 1em;
+    margin-right: 0px;
+    margin-left: 0px;
+  color: #3d6fb1;
+}
+
+.spotlight .content header h2::before,
+.spotlight .content header h3::before,
+.spotlight .content header h4::before,
+.spotlight .content header h5::before,
+.spotlight .content header h6::before {
+ margin-left: 0 !important;
+ margin-right: 0 !important;
+ color: rgb(61, 111, 177);
+}
+
+ .spotlight .content header h2::before,
+ .spotlight .content header h3::before,
+ .spotlight .content header h4::before,
+ .spotlight .content header h5::before,
+ .spotlight .content header h6::before {
+  margin-left: auto !important;
+  margin-right: auto !important;
+ }
