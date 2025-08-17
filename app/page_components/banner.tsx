@@ -8,9 +8,9 @@ export default function banner() {
       {/* Header */}
       <header id="header">
         <div className="inner">
-          <a href="#" className="image avatar">
-            <img src={profilePic} alt="d.ts" />
-          </a>
+          <span className="image avatar">
+            <img src={profilePic} alt="Hey it's me" />
+          </span>
           <h1>
             <strong>Hi, I&apos;m Miles</strong>
             <p>

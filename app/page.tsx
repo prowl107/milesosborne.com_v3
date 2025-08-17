@@ -6,6 +6,9 @@ import footer from "./page_components/footer";
 import timeline from "./page_components/timeline";
 import Script from 'next/script'
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 10;
+
 export default async function Home() {
 
   return (
