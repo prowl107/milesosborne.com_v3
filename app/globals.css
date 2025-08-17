@@ -3337,3 +3337,7 @@ button.button.small:focus {
   color: white;
   outline: none;
 } */
+
+.project-button{
+	padding-top: 2em;
+}
