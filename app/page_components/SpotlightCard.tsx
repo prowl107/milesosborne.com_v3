@@ -5,7 +5,7 @@ import { urlFor } from "@/sanity-utils";
 const SpotlightCard = ({featureProject}) => {
   return (
     <section className="spotlight">
-        <a href={featureProject.thumbnail} className="image fit thumb"> 
+        <a href={urlFor(featureProject.thumbnail).url()} className="image fit thumb"> 
       <img
         src={urlFor(featureProject.thumbnail).url()}
         alt={featureProject.projectName || "Project thumbnail"}
