@@ -1,4 +1,4 @@
-import { getProjects } from "@/sanity-utils"
+import { getProjects } from "@/sanity-utils";
 import SpotlightCard from "./SpotlightCard";
 const projects = await getProjects();
 const featured_projects_list = projects.filter(item => item.featured)

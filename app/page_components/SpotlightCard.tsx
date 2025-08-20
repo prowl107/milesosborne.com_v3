@@ -1,11 +1,15 @@
 import Link from "next/link";
 import { PortableText } from "next-sanity";
+import { urlFor } from "@/sanity-utils";
 
 const SpotlightCard = ({featureProject}) => {
   return (
     <section className="spotlight">
         <a href={featureProject.thumbnail} className="image fit thumb"> 
-        <img src={featureProject.thumbnail} alt=""/>
+      <img
+        src={urlFor(featureProject.thumbnail).url()}
+        alt={featureProject.projectName || "Project thumbnail"}
+      />
         </a>
       <div className="content">
         <header>
