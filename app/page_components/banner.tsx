@@ -1,8 +1,7 @@
 import { getProfile, urlFor } from "@/sanity-utils";
-import Link from "next/link";
 const profile = await getProfile();
 const profilePic = profile.picture;
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export default function banner() {
   return (
