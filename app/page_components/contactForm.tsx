@@ -5,7 +5,7 @@ export default function contactForm() {
   return (
     // Three
     <>
-      <section id="three">
+      <section id="contact">
         <h2>Get In Touch</h2>
           <p>Have a question? Just want to say hi? Feel free to reach out!</p>
         <div className="row">

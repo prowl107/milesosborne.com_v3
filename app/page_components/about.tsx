@@ -6,7 +6,7 @@ const profile = await getProfile();
 export default function about() {
   return (
     // One
-    <section id="one">
+    <section id="about">
       <header className="major">
         <h2>About Me</h2>
       </header>

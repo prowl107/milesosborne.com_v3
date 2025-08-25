@@ -5,12 +5,12 @@ import { urlFor } from "@/sanity-utils";
 const SpotlightCard = ({featureProject}) => {
   return (
     <section className="spotlight">
-        <a href={urlFor(featureProject.thumbnail).url()} className="image fit thumb"> 
+        <div className="image fit thumb"> 
       <img
         src={urlFor(featureProject.thumbnail).url()}
         alt={featureProject.projectName || "Project thumbnail"}
       />
-        </a>
+        </div>
       <div className="content">
         <header>
           <h3>{featureProject.projectName}</h3>
