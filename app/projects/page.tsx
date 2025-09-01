@@ -1,6 +1,5 @@
 import { getProjects } from "@/sanity-utils"
 import ProjectCard from "../page_components/ProjectCard";
-import banner from "../page_components/banner";
 import Menu from "../page_components/menu";
 
 export default async function Home() {

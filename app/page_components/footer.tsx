@@ -1,16 +1,4 @@
-import { getLastUpdatedDate } from "@/sanity-utils";
-
-const ISO_lastUpdatedAt = await getLastUpdatedDate();
-const lastUpdatedAt_date = new Date(ISO_lastUpdatedAt._updatedAt);
-const lastUpdatedDateString = lastUpdatedAt_date.toISOString().substring(0, 10);
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-
 import contactForm from "./contactForm";
-
 
 export default function footer() {
   return (
