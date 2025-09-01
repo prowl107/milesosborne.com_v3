@@ -11,7 +11,7 @@ export default function featured_projects() {
       <div className="inner">
         <header>
           <h2>Featured Projects</h2>
-          <p>Some Things I've Built</p>
+          <p>Some Things I&apos;ve Built</p>
         </header>
         {featured_projects_list.map((item) => (
           <SpotlightCard key={item._id} featureProject={item} />

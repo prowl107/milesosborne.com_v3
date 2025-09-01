@@ -3,7 +3,6 @@ import about from "./page_components/about";
 import featured_projects from "./page_components/featured_projects";
 import footer from "./page_components/footer";
 import timeline from "./page_components/timeline";
-import Script from "next/script";
 import Menu from "./page_components/menu";
 
 import { getLastUpdatedDate } from "@/sanity-utils";
