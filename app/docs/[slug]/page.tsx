@@ -6,7 +6,7 @@ import imageUrlBuilder from '@sanity/image-url'
 // import urlBuilder from '@sanity/image-url'
 import { getImageDimensions } from '@sanity/asset-utils'
 import { createClient } from "next-sanity";
-import banner from "@/app/page_components/banner"
+import Menu from "@/app/page_components/menu";
 
 // Barebones lazy-loaded image component
 const SampleImageComponent = ({value}) => {
@@ -50,8 +50,7 @@ export default async function Page({params}) {
   // console.log(projectDoc);
 
   return <div>
-      {/* Side banner */}
-      {banner()};
+    <Menu></Menu>
     <div
       id="wrapper"
       style={{ height: 100 + "vh", backgroundColor: "#1b1c1c" }}

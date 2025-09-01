@@ -4,20 +4,11 @@ import './globals.css'
 import Script from 'next/script'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
+import '@/assets/css/main.css'
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 10;
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -32,14 +23,15 @@ export default function RootLayout({
   return (
     <html lang="en">
        <head>
+        {/* Scripts */}
         <Script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" strategy='lazyOnload' />
         <Script src="/js/jquery.min.js" strategy='beforeInteractive' />
         <Script src="/js/browser.min.js" strategy='lazyOnload' />
+        <Script src="/js/breakpoints.min.js" strategy='beforeInteractive' />
         <Script src="/js/util.js" strategy='lazyOnload' />
-        <Script src="/js/main.js" strategy='lazyOnload' />
-        <Script src="/js/breakpoints.min.js" strategy='lazyOnload' />
+        <Script src="/js/main.js" strategy='afterInteractive' />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
         {children}
       </body>
     </html>

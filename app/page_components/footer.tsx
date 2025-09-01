@@ -9,55 +9,54 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
+import contactForm from "./contactForm";
+
 
 export default function footer() {
   return (
-    <div>
-      <footer id="footer">
-        <div className="inner">
+        <section id="contact" className="wrapper split style2">
+      <div className="inner">
+        <section>
+          <header>
+            <h3>Contact</h3>
+          </header>
+          <p>Have a question? Just want to say hi? Feel free to reach out!</p>
           <ul className="icons">
             <li>
               <a
                 href="https://www.linkedin.com/in/milesosborne"
-                className="icon brands"
+                className="icon brands fa-linkedin"
                 target="_blank"
-              >       
-                <FontAwesomeIcon icon={faLinkedin} style={{height: "2em"}} />
-                <span className="label">Linkedin</span>
+              >
+                {/* <FontAwesomeIcon icon={faLinkedin} style={{height: "2em"}} /> */}
+                {/* <span className="label">Linkedin</span> */}
               </a>
             </li>
             <li>
               <a
                 href="https://github.com/prowl107"
-                className="icon brands"
+                className="icon brands fa-github"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faGithub} style={{height: "2em"}}/>
-                <span className="label">GitHub</span>
+                {/* <FontAwesomeIcon icon={faGithub} style={{height: "2em"}}/> */}
+                {/* <span className="label">GitHub</span> */}
               </a>
             </li>
             <li>
               <a
                 href="mailto: milesosborne182@gmail.com"
-                className="icon solid"
+                className="icon solid fa-envelope"
               >
-                <FontAwesomeIcon icon={faEnvelope} style={{height: "2em"}}/>
-                <span className="label">Email</span>
+                {/* <FontAwesomeIcon icon={faEnvelope} style={{height: "2em"}}/> */}
+                {/* <span className="label">Email</span> */}
               </a>
             </li>
           </ul>
-          <ul className="copyright">
-            <li>&copy; Miles Osborne </li>
-            <li> Last Updated: {lastUpdatedDateString} </li>
-            <li>
-              Design:{" "}
-              <a href="https://html5up.net/strata" target="_blank">
-                Strata - HTML5 UP
-              </a>
-            </li>
-          </ul>
-        </div>
-      </footer>
-    </div>
+        </section>
+        <section>
+          {contactForm()}
+        </section>
+      </div>
+    </section>
   );
 }

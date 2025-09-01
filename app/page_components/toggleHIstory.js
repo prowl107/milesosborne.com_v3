@@ -10,9 +10,8 @@ export default function ToggleHistory({ children }) {
       <div id="older-jobs" className={visible ? '' : 'timeline-collapsed'}>
         {children}
       </div>
-      <button
+      <button id='toggleHistoryButton'
         onClick={() => setVisible(!visible)}
-        className="button"
       >
         {visible ? 'Hide History' : 'Show Full History'}
       </button>

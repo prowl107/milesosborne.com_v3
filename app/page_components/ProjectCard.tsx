@@ -6,16 +6,14 @@ const ProjectCard = ({ project }) => {
   return (
     <section className="projectCard">
       <span className="image">
-      <img
-        src={urlFor(project.thumbnail).url()}
-        alt={project.projectName || "Project thumbnail"}
-      />
+        <img src={urlFor(project.thumbnail).url()} alt={project.projectName || "Project thumbnail"} />
       </span>
       <div className="content">
         <header>
           <h3>{project.projectName}</h3>
         </header>
-        <PortableText value={project.description}/>
+          {/* <PortableText className="project-description" value={project.description} /> */}
+         <PortableText value={project.description} />
         <footer>
           <ul className="actions">
             {listDetails({ project })}

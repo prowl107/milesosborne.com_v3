@@ -4,23 +4,36 @@ const profilePic = profile.picture;
 
 export default function banner() {
   return (
-    <div>
-      {/* Header */}
-      <header id="header">
-        <div className="inner">
-          <span className="image avatar">
-            <img src={urlFor(profilePic).url()} alt="Hey it's me" />
-          </span>
-          <h1>
-            <strong>Hi, I&apos;m Miles</strong>
+<section id="intro" className="wrapper featured style1">
+      <div className="inner">
+        <span className="image">
+           <img src={urlFor(profilePic).url()} alt="Hey it's me" />        
+        </span>
+        <div className="content">
+          <header>
+            <h1>Hi, I&apos;m Miles</h1>
             <p>
               Embedded Software Engineer
               <br />  and sometimes a rocket scientist on the weekend
               <br />
             </p>
-          </h1>
+          </header>
+          <footer>
+            <ul className="actions">
+              <li>
+                <a href="#contact" className="button big">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="/Resume.pdf" target="_blank" className="button big">
+                  Resume
+                </a>
+              </li>
+            </ul>
+          </footer>
         </div>
-      </header>
-    </div>
+      </div>
+    </section>
   );
 }

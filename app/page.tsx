@@ -1,16 +1,20 @@
 import banner from "./page_components/banner";
 import about from "./page_components/about";
 import featured_projects from "./page_components/featured_projects";
-import contactForm from "./page_components/contactForm";
 import footer from "./page_components/footer";
 import timeline from "./page_components/timeline";
-import Script from 'next/script'
+import Script from "next/script";
+import Menu from "./page_components/menu";
 
-export const dynamic = 'force-dynamic';
+import { getLastUpdatedDate } from "@/sanity-utils";
+const ISO_lastUpdatedAt = await getLastUpdatedDate();
+const lastUpdatedAt_date = new Date(ISO_lastUpdatedAt._updatedAt);
+const lastUpdatedDateString = lastUpdatedAt_date.toISOString().substring(0, 10);
+
+export const dynamic = "force-dynamic";
 export const revalidate = 10;
 
 export default async function Home() {
-
   return (
     <div>
       {/**************************************************
@@ -18,25 +22,30 @@ export default async function Home() {
        ***************************************************/}
 
       {/* Side banner */}
+      <Menu></Menu>
       {banner()}
+      {/* {menu()} */}
 
-      <div id="main">
-        {about()}
-        {timeline()}
-        {featured_projects()}
-        {contactForm()}
-      </div>
+      {about()}
+      {timeline()}
+      {featured_projects()}
+      {/* {contactForm()} */}
 
       {/* Footer section */}
       {footer()}
 
-      {/* Scripts */}
-      <Script src="js/jquery.min.js"></Script>
-      <Script src="js/jquery.poptrox.min.js"></Script>
-      <Script src="js/browser.min.js"></Script>
-      <Script src="js/breakpoints.min.js"></Script>
-      <Script src="js/util.js"></Script>
-      <Script src="js/main.js"></Script>
+      <section id="tagline" className="wrapper split style2">
+        <div className="copyright inner">
+          <p id="message">
+            &copy; Miles Osborne | Last Updated: {lastUpdatedDateString}
+            <br></br>Design:{" "}
+            <a href="https://html5up.net/strata" target="_blank">
+              Strata - HTML5 UP
+            </a>{" "}
+          </p>
+          <p id="message"></p>
+        </div>
+      </section>
     </div>
   );
 }

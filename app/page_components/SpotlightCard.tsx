@@ -5,19 +5,17 @@ import { urlFor } from "@/sanity-utils";
 const SpotlightCard = ({featureProject}) => {
   return (
     <section className="spotlight">
-        <a href={urlFor(featureProject.thumbnail).url()} className="image fit thumb"> 
-      <img
-        src={urlFor(featureProject.thumbnail).url()}
-        alt={featureProject.projectName || "Project thumbnail"}
-      />
-        </a>
+      <span className="image">
+        <img src={urlFor(featureProject.thumbnail).url()} alt={featureProject.projectName || "Project thumbnail"} />
+      </span>
       <div className="content">
         <header>
           <h3>{featureProject.projectName}</h3>
         </header>
-          <PortableText value={featureProject.description} />
+          {/* <PortableText className="project-description" value={featureProject.description} /> */}
+         <PortableText value={featureProject.description} />
         <footer>
-          <ul className="actions project-button">
+          <ul className="actions">
             {listDetails({ featureProject })}
             {listSourceButton({ featureProject })}
           </ul>

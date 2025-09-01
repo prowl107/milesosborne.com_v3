@@ -1,117 +1,106 @@
 /*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Reflex by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
 */
 
-(function($) {
+(function ($) {
+  var $window = $(window),
+    $body = $("body");
 
-	var $window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$footer = $('#footer'),
-		$main = $('#main'),
-		settings = {
+  // Breakpoints.
+  breakpoints({
+    xlarge: ["1281px", "1680px"],
+    large: ["981px", "1280px"],
+    medium: ["737px", "980px"],
+    small: ["481px", "736px"],
+    xsmall: ["361px", "480px"],
+    xxsmall: [null, "360px"],
+  });
 
-			// Parallax background effect?
-				parallax: true,
+  // Play initial animations on page load.
+  $window.on("load", function () {
+    window.setTimeout(function () {
+      $body.removeClass("is-preload");
+    }, 100);
+  });
 
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 20
+  // Menu.
+  var $menu = $("#menu"),
+    $menuInner;
 
-		};
+  $menu.wrapInner('<div class="inner"></div>');
+  $menuInner = $menu.children(".inner");
+  $menu._locked = false;
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1800px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ '481px',   '736px'  ],
-			xsmall:  [ null,      '480px'  ],
-		});
+  $menu._lock = function () {
+    if ($menu._locked) return false;
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+    $menu._locked = true;
 
-	// Touch?
-		if (browser.mobile) {
+    window.setTimeout(function () {
+      $menu._locked = false;
+    }, 350);
 
-			// Turn on touch mode.
-				$body.addClass('is-touch');
+    return true;
+  };
 
-			// Height fix (mostly for iOS).
-				window.setTimeout(function() {
-					$window.scrollTop($window.scrollTop() + 1);
-				}, 0);
+  $menu._show = function () {
+    if ($menu._lock()) $menu.addClass("visible");
+  };
 
-		}
+  $menu._hide = function () {
+    if ($menu._lock()) $menu.removeClass("visible");
+  };
 
-	// Footer.
-		breakpoints.on('<=medium', function() {
-			$footer.insertAfter($main);
-		});
+  $menu._toggle = function () {
+    if ($menu._lock()) $menu.toggleClass("visible");
+  };
 
-		breakpoints.on('>medium', function() {
-			$footer.appendTo($header);
-		});
+  $menuInner.on("click", function (event) {
+    event.stopPropagation();
+  })
+  .on('click', 'a', function(event) {
 
-	// Header.
+  	var href = $(this).attr('href');
 
-		// Parallax background.
+  	// event.preventDefault();
+  	event.stopPropagation();
 
-			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-				if (browser.name == 'ie'
-				||	browser.mobile)
-					settings.parallax = false;
+  // Hide.
+  $menu._hide();
 
-			if (settings.parallax) {
+  	// Redirect.
+  		window.setTimeout(function() {
+  			// window.location.href = href;
+  		}, 250);
 
-				breakpoints.on('<=medium', function() {
+  });
 
-					$window.off('scroll.strata_parallax');
-					$header.css('background-position', '');
+  $menu
+    .appendTo($body)
+    .on("click", function (event) {
+      event.stopPropagation();
+      event.preventDefault();
 
-				});
+      $menu.removeClass("visible");
+    })
+    .append('<a class="close" href="#menu">Close</a>');
 
-				breakpoints.on('>medium', function() {
+  $body
+    .on("click", 'a[href="#menu"]', function (event) {
+      event.stopPropagation();
+      event.preventDefault();
 
-					$header.css('background-position', 'left 0px');
-
-					$window.on('scroll.strata_parallax', function() {
-						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-					});
-
-				});
-
-				$window.on('load', function() {
-					$window.triggerHandler('scroll');
-				});
-
-			}
-
-	// Main Sections: Two.
-
-		// Lightbox gallery.
-			$window.on('load', function() {
-
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
-
-			});
-
+      // Toggle.
+      $menu._toggle();
+    })
+    .on("click", function (event) {
+      // Hide.
+      $menu._hide();
+    })
+    .on("keydown", function (event) {
+      // Hide on escape.
+      if (event.keyCode == 27) $menu._hide();
+    });
 })(jQuery);

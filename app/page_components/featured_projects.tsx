@@ -1,56 +1,33 @@
 import { getProjects } from "@/sanity-utils";
 import SpotlightCard from "./SpotlightCard";
+import Link from "next/link";
 const projects = await getProjects();
 const featured_projects_list = projects.filter(item => item.featured)
 
 
 export default function featured_projects() {
     return(
-// Two 
-					<section id="two">
-						<h2>Recent Work</h2>
-						<div className="row">
-							{featured_projects_list.map((item) => (
-							<article className="col-6 col-12-xsmall work-item" key={item._id}>
-								  <SpotlightCard featureProject={item} />
-								{/* {addLinkAttribute()} */}
-							</article>
-							))}
-							{/* <article className="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/01.jpg" className="image fit thumb"><img src="milesosborne.com_v3/app/images/thumbs/01.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article className="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" className="image fit thumb"><img src="app/images/thumbs/02.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article className="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" className="image fit thumb"><img src="app/images/thumbs/03.jpg" alt="" /></a>
-								<h3>Tortor metus commodo</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article className="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" className="image fit thumb"><img src="app/images/thumbs/04.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article className="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/05.jpg" className="image fit thumb"><img src="app/images/thumbs/05.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article className="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" className="image fit thumb"><img src="app/images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article> */}
-						</div>
-						<ul className="actions">
-							<li><a href="/projects" className="button">Full Portfolio</a></li>
-						</ul>
-					</section>
+    <section className="wrapper style1 special" id="featured">
+      <div className="inner">
+        <header>
+          <h2>Featured Projects</h2>
+          <p>Some Things I've Built</p>
+        </header>
+        {featured_projects_list.map((item) => (
+          <SpotlightCard key={item._id} featureProject={item} />
+        ))}
+        {/* {addLinkAttribute()} */}
+        <footer>
+          <ul className="actions special">
+            <li>
+              <Link href="/projects" className="button">
+                View All Projects
+              </Link>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </section>
     )
 }
 
