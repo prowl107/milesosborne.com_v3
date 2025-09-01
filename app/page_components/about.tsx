@@ -16,7 +16,7 @@ export default function about() {
         </header>
         <div className="container">
           <div id="skills" className="row">
-            <div className="col-1"></div>
+            <div className="col-md-auto"></div>
             <div className="col-md-auto col-12-medium">
               <h3>Software Development</h3>
               <ul>
@@ -51,7 +51,7 @@ export default function about() {
           </div>
 
           <div id="skills" className="row">
-            <div className="col-1"></div>
+            <div className="col-md-auto"></div>
             <div className="col-md-auto col-12-medium">
               <h3>Web Development</h3>
               <ul>

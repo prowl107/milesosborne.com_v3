@@ -38,8 +38,8 @@ export default async function Home() {
           <p id="message">
             &copy; Miles Osborne | Last Updated: {lastUpdatedDateString}
             <br></br>Design:{" "}
-            <a href="https://html5up.net/strata" target="_blank">
-              Strata - HTML5 UP
+            <a href="https://pixelarity.com/reflex" target="_blank">
+              Reflex - Pixelarity
             </a>{" "}
           </p>
           <p id="message"></p>
