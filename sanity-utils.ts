@@ -4,6 +4,7 @@ import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 import { Project } from "@/types/Project"
 import { Profile } from "@/types/Profile"
 import { Documentation } from "@/types/Documentation"
+import { WorkExperience }from "@/types/WorkExperience"
 
 export const dynamic = "force-dynamic"
 
@@ -56,6 +57,25 @@ export async function getProfile(): Promise<Profile> {
       bio
     }`
   )
+}
+
+export async function getWorkExperience(): Promise<Project[]> {
+  return client.fetch(
+    groq`*[_type == "workExperience"]{
+      _id,
+      _createdAt,
+      jobTitle,
+      company,
+      startDate,
+      endDate, 
+      description,
+      featured,
+    }`
+  )
+}
+
+export async function isWorkExperienceFeatured({ Project: project }) {
+  return project.featured === true
 }
 
 export async function isProjectFeatured({ Project: project }) {
