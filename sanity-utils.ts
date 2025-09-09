@@ -61,7 +61,7 @@ export async function getProfile(): Promise<Profile> {
 
 export async function getWorkExperience(): Promise<Project[]> {
   return client.fetch(
-    groq`*[_type == "workExperience"]{
+    groq`*[_type == "workExperience"] | order(endDate desc) {
       _id,
       _createdAt,
       jobTitle,
