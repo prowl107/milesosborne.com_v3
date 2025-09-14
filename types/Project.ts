@@ -13,6 +13,8 @@ export type Project = {
     
     description: PortableTextBlock[];
     
+    tags: string;
+
     sourceURL: string;
     
     documentationURL: string;

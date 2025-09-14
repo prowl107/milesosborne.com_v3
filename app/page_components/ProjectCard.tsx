@@ -4,7 +4,7 @@ import { urlFor } from "@/sanity-utils";
 
 const ProjectCard = ({ project }) => {
   return (
-    <section className="projectCard" id={project.projectName}>
+    <section className="projectCard" id={project.slug}>
       <span className="image">
         <img src={urlFor(project.thumbnail).url()} alt={project.projectName || "Project thumbnail"} />
       </span>
@@ -14,6 +14,9 @@ const ProjectCard = ({ project }) => {
         </header>
           {/* <PortableText className="project-description" value={project.description} /> */}
          <PortableText value={project.description} />
+         <p><em>
+          {project.tags}
+         </em></p>
         <footer>
           <ul className="actions">
             {listDetails({ project })}

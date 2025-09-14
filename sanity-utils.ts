@@ -39,6 +39,7 @@ export async function getProjects(): Promise<Project[]> {
       "slug": slug.current,
       thumbnail,        
       description,
+      tags,
       sourceURL,
       documentationURL,
       documentationRef,

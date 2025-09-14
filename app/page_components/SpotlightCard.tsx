@@ -4,7 +4,7 @@ import { urlFor } from "@/sanity-utils";
 
 const SpotlightCard = ({featureProject}) => {
   return (
-    <section className="spotlight">
+    <section className="spotlight" id={featureProject.projectName}>
       <span className="image">
         <img src={urlFor(featureProject.thumbnail).url()} alt={featureProject.projectName || "Project thumbnail"} />
       </span>
@@ -14,6 +14,9 @@ const SpotlightCard = ({featureProject}) => {
         </header>
           {/* <PortableText className="project-description" value={featureProject.description} /> */}
          <PortableText value={featureProject.description} />
+         <p>
+          {featureProject.tags}
+         </p>
         <footer>
           <ul className="actions">
             {listDetails({ featureProject })}

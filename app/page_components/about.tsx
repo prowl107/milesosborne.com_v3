@@ -45,6 +45,8 @@ export default function about() {
                 <li>ARM</li>
                 <li>NXP</li>
                 <li>Artix-7 FPGA</li>
+                <li>Atmel SAMDX</li>
+                <li>Nordic NRF Series</li>
               </ul>
             </div>
             <div className="col-md-auto"></div>
@@ -58,6 +60,7 @@ export default function about() {
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Javascript</li>
+                <li>Next.js</li>
               </ul>
             </div>
 
@@ -71,10 +74,11 @@ export default function about() {
             </div>
 
             <div className="col-md-auto col-12-medium">
-              <h3>Research Interests</h3>
+              <h3>Interests</h3>
               <ul>
-                <li>Embedded systems/software</li>
-                <li>Real-time systems</li>
+                <li>Build Systems</li>
+                <li>Real-time Systems</li>
+                <li>Operating Systems</li>
                 <li>Software quality assurance</li>
                 <li>Computer architecture</li>
               </ul>
