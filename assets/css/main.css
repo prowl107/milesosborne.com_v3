@@ -1,5 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300italic,500,500italic");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 
 /*Reflex by Pixelaritypixelarity.com | hello@pixelarity.comLicense: pixelarity.com/license*/html, body, div, span, applet, object,iframe, h1, h2, h3, h4, h5, h6, p, blockquote,pre, a, abbr, acronym, address, big, cite,code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b,u, i, center, dl, dt, dd, ol, ul, li, fieldset,form, label, legend, table, caption, tbody,tfoot, thead, tr, th, td, article, aside,canvas, details, embed, figure, figcaption,footer, header, hgroup, menu, nav, output, ruby,section, summary, time, mark, audio, video {
@@ -113,10 +113,11 @@ select,
 textarea {
 color: #dfdfdf;
 font-family: Raleway,Helvetica,sans-serif;;
-font-size: 16pt;
+font-size: 14pt;
 font-weight: 400;
 line-height: 1.75em;
 }
+
 @media screen and (max-width: 1680px) {
  body,
  input,
