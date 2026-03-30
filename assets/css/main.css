@@ -3251,6 +3251,11 @@ body.is-preload #intro .content {
 #skills li{
 color: #a4a4a4
 }
+
+#skills-container{
+  width: fit-content;
+  margin: 0 auto;
+}
   
 .projectCard {
     display: -moz-flex;

@@ -14,10 +14,9 @@ export default function about() {
           <PortableText value={profile.bio} />
           {/* {addLinkAttribute()} */}
         </header>
-        <div className="container">
+        <div className="container" id="skills-container">
           <div id="skills" className="row">
-            <div className="col-md-auto"></div>
-            <div className="col-md-auto col-12-medium">
+            <div className="col-md-auto">
               <h3>Software Development</h3>
               <ul>
                 <li>Embedded C</li>
@@ -26,7 +25,7 @@ export default function about() {
                 <li>Python</li>
               </ul>
             </div>
-            <div className="col-md-auto col-12-medium">
+            <div className="col-md-auto">
               <h3>Embedded Systems</h3>
               <ul>
                 <li>VxWorks RTOS</li>
@@ -37,7 +36,7 @@ export default function about() {
               </ul>
             </div>
 
-            <div className="col-md-auto col-12-medium">
+            <div className="col-md-auto">
               <h3>Platforms</h3>
               <ul>
                 <li>ST Microcontrollers (STM32)</li>
@@ -49,12 +48,10 @@ export default function about() {
                 <li>Nordic NRF Series</li>
               </ul>
             </div>
-            <div className="col-md-auto"></div>
           </div>
 
           <div id="skills" className="row">
-            <div className="col-md-auto"></div>
-            <div className="col-md-auto col-12-medium">
+            <div className="col-md-auto">
               <h3>Web Development</h3>
               <ul>
                 <li>HTML</li>
@@ -64,7 +61,7 @@ export default function about() {
               </ul>
             </div>
 
-            <div className="col-md-auto col-12-medium">
+            <div className="col-md-auto">
               <h3>CAD/Design</h3>
               <ul>
                 <li>Altium Designer</li>
@@ -73,7 +70,7 @@ export default function about() {
               </ul>
             </div>
 
-            <div className="col-md-auto col-12-medium">
+            <div className="col-md-auto">
               <h3>Interests</h3>
               <ul>
                 <li>Build Systems</li>
@@ -83,7 +80,6 @@ export default function about() {
                 <li>Computer architecture</li>
               </ul>
             </div>
-            <div className="col-md-auto"></div>
           </div>
         </div>
       </div>
